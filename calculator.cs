@@ -138,8 +138,37 @@ void verifyInput(string input)
 		}
 }
 
-void multiply(){}
-void division(){}
-void addition(){}
-void subtraction(){}
-void exit(){}
+void multiply()
+{
+		Console.Clear();
+		Console.WriteLine("You chose multiplication");
+		Console.Read ();
+}
+void division()
+{
+		Console.Clear();
+		Console.WriteLine("You chose division");
+		Console.Read();
+
+}
+void addition()
+{
+		Console.Clear();
+		Console.WriteLine("You chose addition");
+		Console.Read();
+
+}
+void subtraction()
+{
+		Console.Clear ();
+		Console.WriteLine("You chose subtraction");
+		Console.Read();
+
+}
+void exit()
+{
+		Console.Clear();
+		Console.WriteLine("You chose exit \nThank You For Using The Program");
+		Console.Read();
+
+}
