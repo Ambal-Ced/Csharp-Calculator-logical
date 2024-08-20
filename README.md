@@ -1,4 +1,4 @@
 # Csharp-Calculator-logical
 step by step calculator in terminal with error handling and logical steps
 
--- We add function that we think will be needed to process the logic of the code
+-- We handle the operation and logic such as input and use try catch as well as call the verifyInput for the next step
