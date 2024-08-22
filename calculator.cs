@@ -25,15 +25,12 @@ void process( bool isingui)
 								if (input != null) {
 										verifyInput(input);
 										isingui = false;
-
 								}
 						}
 						catch 
 						{
 								input = null;
 						}
-
-
 				}
 				catch (Exception e) 
 				{ 
@@ -41,7 +38,6 @@ void process( bool isingui)
 				}
 		}while (running);
 }
-
 void verifyInput(string input)
 {
 		bool muinput = true;
@@ -50,15 +46,12 @@ void verifyInput(string input)
 		input3letter = uinput.ToCharArray();
 		try
 		{
-
-
 				if (input.Length > 1)
 				{
 						string newinput;
 						newinput = null;
 						try
 						{
-
 								foreach (char letter in input3letter)
 								{
 										newinput = newinput + letter;
@@ -131,7 +124,6 @@ void verifyInput(string input)
 								Console.Read();
 								Console.Clear();
 								process(isingui = true);
-
 						}
 				}
 		} catch (Exception e) { 
@@ -139,20 +131,16 @@ void verifyInput(string input)
 				process(isingui = true);
 		}
 }
-
 void multiply()
 {
 		string userInput;
 		decimal start = 1m;
-
 		Console.Clear();
 		Console.WriteLine("You chose multiplication");
 		Console.WriteLine("Enter how many numbers to multiply");
 		Console.WriteLine("(Example: 3, the program will ask for 3 numbers) ");
 		Console.Write(">> ");
-
 		userInput = Console.ReadLine();
-
 		try
 		{
 				if (userInput != null || userInput == "1")
@@ -164,26 +152,21 @@ void multiply()
 								Console.WriteLine("Enter " + userInput + " numbers");
 								int j = Convert.ToInt32(userInput);
 								decimal[] storeinput = new decimal[j];
-
 								for (int i = 0; i < j; i++)
 								{
 										Console.Write(">> ");
 										storeinput[i] = Convert.ToDecimal(Console.ReadLine());
 								}
-
 								Console.Clear();
 								foreach (decimal newnum in storeinput)
 								{
 										start *= newnum;
 								}
-
 								Console.WriteLine("\aThe Results are: " + start);
 								userInput = null;
 								start = 0 ;
 								storeinput = null;
 								Console.Read();
-
-
 						}
 						catch
 						{
@@ -192,7 +175,6 @@ void multiply()
 								Console.Read();
 								userInput = null;
 						}
-
 				}
 		}catch (Exception e)
 		{
@@ -201,21 +183,17 @@ void multiply()
 				Console.WriteLine("Details: " + e.Message);
 				Console.Read();
 		}
-
 }
 void division()
 {
 		string userInput;
 		decimal start = 1m;
-
 		Console.Clear();
 		Console.WriteLine("You chose Division");
 		Console.WriteLine("Enter how many numbers to be divided");
 		Console.WriteLine("(Example: 3, the program will ask for 3 numbers) ");
 		Console.Write(">> ");
-
 		userInput = Console.ReadLine();
-
 		try
 		{
 				if (userInput != null || userInput == "1")
@@ -227,27 +205,22 @@ void division()
 								Console.WriteLine("Enter " + userInput + " numbers");
 								int j = Convert.ToInt32(userInput);
 								decimal[] storeinput = new decimal[j];
-
 								for (int i = 0; i < j; i++)
 								{
 										Console.Write(">> ");
 										storeinput[i] = Convert.ToDecimal(Console.ReadLine());
 								}
-
 								Console.Clear();
 								start = storeinput[0] *storeinput[0];
 										foreach (decimal newnum in storeinput)
 								{
 										start /= newnum;
 								}
-
 								Console.WriteLine("\aThe Results are: " + start);
 								userInput = null;
 								start = 0;
 								storeinput = null;
 								Console.Read();
-
-
 						}
 						catch
 						{
@@ -256,7 +229,6 @@ void division()
 								Console.Read();
 								userInput = null;
 						}
-
 				}
 		}
 		catch (Exception e)
@@ -266,22 +238,18 @@ void division()
 				Console.WriteLine("Details: " + e.Message);
 				Console.Read();
 		}
-
 
 }
 void addition()
 {
 		string userInput;
 		decimal start = 0m;
-
 		Console.Clear();
 		Console.WriteLine("You chose Addition");
 		Console.WriteLine("Enter how many numbers to be added");
 		Console.WriteLine("(Example: 3, the program will ask for 3 numbers) ");
 		Console.Write(">> ");
-
 		userInput = Console.ReadLine();
-
 		try
 		{
 				if (userInput != null || userInput == "1")
@@ -293,26 +261,21 @@ void addition()
 								Console.WriteLine("Enter " + userInput + " numbers");
 								int j = Convert.ToInt32(userInput);
 								decimal[] storeinput = new decimal[j];
-
 								for (int i = 0; i < j; i++)
 								{
 										Console.Write(">> ");
 										storeinput[i] = Convert.ToDecimal(Console.ReadLine());
 								}
-
 								Console.Clear();
 								foreach (decimal newnum in storeinput)
 								{
 										start += newnum;
 								}
-
 								Console.WriteLine("\aThe Results are: " + start);
 								userInput = null;
 								start = 0;
 								storeinput = null;
 								Console.Read();
-
-
 						}
 						catch
 						{
@@ -321,7 +284,6 @@ void addition()
 								Console.Read();
 								userInput = null;
 						}
-
 				}
 		}
 		catch (Exception e)
@@ -331,22 +293,17 @@ void addition()
 				Console.WriteLine("Details: " + e.Message);
 				Console.Read();
 		}
-
-
 }
 void subtraction()
 {
 		string userInput;
 		decimal start = 0m;
-
 		Console.Clear();
 		Console.WriteLine("You chose subtraction");
 		Console.WriteLine("Enter how many numbers to be subtracted");
 		Console.WriteLine("(Example: 3, the program will ask for 3 numbers) ");
 		Console.Write(">> ");
-
 		userInput = Console.ReadLine();
-
 		try
 		{
 				if (userInput != null || userInput == "1")
@@ -358,13 +315,11 @@ void subtraction()
 								Console.WriteLine("Enter " + userInput + " numbers");
 								int j = Convert.ToInt32(userInput);
 								decimal[] storeinput = new decimal[j];
-
 								for (int i = 0; i < j; i++)
 								{
 										Console.Write(">> ");
 										storeinput[i] = Convert.ToDecimal(Console.ReadLine());
 								}
-
 								Console.Clear();
 								if (storeinput[0] > 0)
 								{
@@ -378,7 +333,6 @@ void subtraction()
 										userInput = null;
 										start = 0;
 										storeinput = null;
-
 								}
 								else if (storeinput[0] < 0) {
 										start = storeinput[0]*2;
@@ -392,11 +346,6 @@ void subtraction()
 										start = 0;
 										storeinput = null;
 								}
-
-
-
-
-
 						}
 						catch
 						{
@@ -405,7 +354,6 @@ void subtraction()
 								Console.Read();
 								userInput = null;
 						}
-
 				}
 		}
 		catch (Exception e)
@@ -415,8 +363,6 @@ void subtraction()
 				Console.WriteLine("Details: " + e.Message);
 				Console.Read();
 		}
-
-
 }
 void exit()
 {
@@ -425,5 +371,4 @@ void exit()
 		Console.WriteLine("\aYou chose exit \n Thank You For Using The Program!");
 		Console.Read();
 		Environment.Exit(0);
-
 }
